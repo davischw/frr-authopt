@@ -45,6 +45,7 @@
 #include "bgp_addpath_types.h"
 #include "bgp_nexthop.h"
 #include "bgp_io.h"
+#include "tcp_authopt.h"
 
 #include "lib/bfd.h"
 
@@ -1356,6 +1357,8 @@ struct peer {
 	char *password;
 
 	/* TCP Authentication Option keychain */
+	struct tcp_authopt_user tcp_authopt_user;
+	struct tcp_authopt_user tcp_authopt_user_listen;
 	char *tcp_authopt_keychain_name;
 
 	/* default-originate route-map.  */
