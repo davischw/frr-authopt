@@ -5,6 +5,7 @@ ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
 # Update Ubuntu Software repository
 RUN apt update && \
     apt-get install -y \
+      tmux screen \
       git autoconf automake libtool make libreadline-dev texinfo \
       pkg-config libpam0g-dev libjson-c-dev bison flex python3-pip \
       libc-ares-dev python3-dev python3-sphinx \
